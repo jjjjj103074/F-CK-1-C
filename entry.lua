@@ -52,5 +52,7 @@ Options =
 
 })
 ---------------------------------------------------------------------------------------
+dofile(current_mod_path.."/Views.lua")
+dofile(current_mod_path.."/F-CK-1-C.lua")
 
 plugin_done()-- finish declaration , clear temporal data
