@@ -8,7 +8,7 @@ displayName  = _("F-CK-1-C"),
 
 fileMenuName = _("F-CK-1-C"),
 update_id        = "F-CK-1-C",
-version		 = "0.1.0",
+version		 = "0.1.1",
 state		 = "installed",
 info		 = _("F-CK-1-C test mod"),
 encyclopedia_path = current_mod_path..'/Encyclopedia',
@@ -26,7 +26,6 @@ Missions =
 		{
 			name		= _("F-CK-1-C"),
 			dir			= "Missions",
-			--CLSID		= "{CLSID5456456346CLSID}",
 		},
 	},
 LogBook =
@@ -49,10 +48,9 @@ Options =
             CLSID		= "{F-CK-1-C options}"
         },
     },
-
 })
 ---------------------------------------------------------------------------------------
-dofile(current_mod_path.."/Views.lua")
-dofile(current_mod_path.."/F-CK-1-C.lua")
+-- dofile(current_mod_path.."/Views.lua")
+-- dofile(current_mod_path.."/F-CK-1-C.lua")
 
 plugin_done()-- finish declaration , clear temporal data
