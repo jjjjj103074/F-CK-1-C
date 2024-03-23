@@ -50,6 +50,11 @@ Options =
     },
 })
 ---------------------------------------------------------------------------------------
+mount_vfs_texture_path	(current_mod_path.."/Skins/1/ME")	-- for simulator loading window
+mount_vfs_model_path    (current_mod_path.."/Shapes")
+mount_vfs_sound_path    (current_mod_path.."/Sounds")
+mount_vfs_liveries_path (current_mod_path.."/Liveries")
+---------------------------------------------------------------------------------------
 -- dofile(current_mod_path.."/Views.lua")
 -- dofile(current_mod_path.."/F-CK-1-C.lua")
 
