@@ -64,7 +64,7 @@ local F_CK_1C = {
     M_max = 19187, -- 最大起飛重量 (kg)
     M_fuel_max = 3249, -- 最大內部燃油質量 (kg)
     -- 以下為 AI 相關性能參數（標註為 [AI]），部分取自 A-4E 範例
-    CAS_min = 25.7, -- 最低空戰/近支援時 AI 最低指示空速 (m/s) [AI] (參考 A-4E)
+    CAS_min = 25.7, -- 最低校正空速 (Calibrated Airspeed)，AI 最低飛行速度 (m/s) [AI] (參考 A-4E)
 
     -- 幾何尺寸（公尺）
     length = 14.5, -- 機身總長 (m)
@@ -99,7 +99,7 @@ local F_CK_1C = {
     IR_emission_coeff_ab = 3.0, -- 紅外發射係數（加力時，無單位）
 
     -- 空中加油
-    air_refuel_receptacle_pos = {-0.051, 0.911, 0.0}, -- 空中加油吊艙/接收器位置 (x,y,z) (m)
+    air_refuel_receptacle_pos = {-0.051, 0.911, 0.0}, -- 空中加油接收器位置 (x,y,z) (m)
     tanker_type = 1, -- 空中加油機分類（整數，DCS 定義）
 
     -- ===================== 起落架區 (Landing Gear) =====================
@@ -149,7 +149,7 @@ local F_CK_1C = {
         supply_position = {0.4, 0.55, 0.0},
         effects = {gatling_effect(351, 6), fire_effect(350), smoke_effect()}
     })},
-    ammo_type_default = 1, -- 飛彈/彈藥類型預設索引（整數，對應 ammo_type 列表）
+    ammo_type_default = 1, -- 機砲彈藥類型預設索引（整數，對應 ammo_type 列表）
     ammo_type = {_("HEI-T High Explosive Incendiary-Tracer"), _("HEI High Explosive Incendiary"), _("AP Armor Piercing")},
 
     -- Pylons 範例（精簡版） [OPTIONAL]
@@ -164,7 +164,7 @@ local F_CK_1C = {
         -- arg = 控制參數編號 (整數)，arg_value 為初始數值（無單位）
     }, {
         -- 掛載
-    }, 1), -- 中央
+    }, 1), -- pylon 1 結束
     pylon(5, 0, -0.704, -1.173, 0.0, {
         arg = 312,
         arg_value = 0,
@@ -242,7 +242,7 @@ local F_CK_1C = {
     SFM_Data = {
         aerodynamics = {
             -- 基本氣動係數
-            Cy0 = 0, -- 基線側向力係數 (unitless)
+            Cy0 = 0, -- 零升力迎角時的升力係數 (unitless)
             Mzalfa = 4.355, -- 迎角導數相關係數 (unitless)
             Mzalfadt = 0.8, -- 迎角率導數調整 (unitless)
             kjx = 2.75, -- 翼展/慣性調整係數 (unitless)
@@ -250,7 +250,7 @@ local F_CK_1C = {
             Czbe = -0.016, -- 基線縱向力係數 (unitless)
             cx_gear = 0.0268, -- 起落架造成之阻力增量 (unitless)
             cx_flap = 0.05, -- 襟翼造成阻力 (unitless)
-            cy_flap = 0.52, -- 襟翼側力增益 (unitless)
+            cy_flap = 0.52, -- 襟翼升力增益 (unitless)
             cx_brk = 0.06, -- 煞車阻力 (unitless)
             -- table_data 為分段/速度表，陣列內每列常見欄位 (依 DCS 版本略有差異)：
             -- [Mach, Cx0? or Cx, Cy?, Cz?, some coefficients..., Refs]
