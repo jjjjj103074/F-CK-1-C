@@ -3,6 +3,8 @@
 -- 本檔案目的：提供完整但可修改的機體欄位 (可用於 AI/伺服器測試)
 -- 註：某些 helper（pylon, gun_mount, makeAirplaneCanopyGeometry 等）與常數
 -- (WSTYPE_PLACEHOLDER, MODULATION_AM 等) 由 DCS 執行環境提供，載入時需在 mod 環境下執行。
+
+
 -- ===================== 基本說明區 (Identification) =====================
 -- Name / DisplayName / shape_table_data 必要用於引擎辨識與載入
 local F_CK_1C = {
@@ -11,6 +13,9 @@ local F_CK_1C = {
     -- 顯示名稱（可本地化）
     DisplayName = _('F-CK-1C'),
 
+    Rate = 40, -- RewardPoint in Multiplayer
+
+    Shape = "f-ck-1c",
     -- shape_table_data: 告訴引擎要載入的 3D 模型與毀損模型
     shape_table_data = {{
         file = "f-ck-1c", -- 3D 模型檔名（需放在 Shapes 資料夾）
@@ -28,8 +33,86 @@ local F_CK_1C = {
         fire = {0, 1}
     }},
 
-    -- 國家來源
-    country_of_origin = "ROC",
+    -- 國家
+    Countries = {
+        "Abkhazia",
+        "Algeria",
+        "Argentina",
+        "Australia",
+        "Austria",
+        "Belarus",
+        "Belgium",
+        "Brazil",
+        "Bulgaria",
+        "Canada",
+        "China",
+        "Chile",
+        "Croatia",
+        "Cuba",
+        "Czech Republic",
+        "Cyprus",
+        "Denmark",
+        "Egypt",
+        "Finland",
+        "France",
+        "Georgia",
+        "Germany",
+        "Ghana",
+        "Greece",
+        "Honduras",
+        "Hungary",
+        "India",
+        "Indonesia",
+        "Insurgents",
+        "Iran",
+        "Iraq",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Jordan",
+        "Kazakhstan",
+        "Lebanon",
+        "Libya",
+        "Malaysia",
+        "Mexico",
+        "Morocco",
+        "The Netherlands",
+        "Nigeria",
+        "North Korea",
+        "Norway",
+        "Oman",
+        "Pakistan",
+        "Peru",
+        "Phllipines",
+        "Poland",
+        "Qatar",
+        "Romania",
+        "Russia",
+        "Saudi Arabia",
+        "Serbia",
+        "Slovakia",
+        "Slovenia",
+        "South Africa",
+        "South Korea",
+        "South Ossetia",
+        "Spain",
+        "Sudan",
+        "Sweden",
+        "Switzerland",
+        "Syria",
+        "Thailand",
+        "Tunisia",
+        "Turkey",
+        "UK",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Nations Peacekeepers",
+        "USA",
+        "USAF Aggressors",
+        "Venezuela",
+        "Vietnam",
+        "Yemen"
+    },
 
     -- UI 與分類
     -- UI 顯示相關（可選，影響選單顯示） [OPTIONAL]
