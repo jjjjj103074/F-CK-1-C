@@ -15,23 +15,25 @@ local F_CK_1C = {
 
     Rate = 40, -- RewardPoint in Multiplayer
 
-    Shape = "f-ck-1c",
+    Shape = "F-CK-1C",
     -- shape_table_data: 告訴引擎要載入的 3D 模型與毀損模型
-    shape_table_data = {{
-        file = "f-ck-1c", -- 3D 模型檔名（需放在 Shapes 資料夾）
-        username = "F-CK-1C",
-        index = WSTYPE_PLACEHOLDER,
-        life = 20, -- 機體生命值（耐久/HP，整數，數值越高越難被摧毀）
-        vis = 3, -- 可見性等級（LOD/視覺等級，整數）
-        desrt = "F-CK-1C_destr",
-        fire = {300, 2}, -- 火焰效果設定：{持續時間秒, 強度}（秒, unitless）
-        classname = "lLandPlane",
-        positioning = "BYNORMAL"
-    }, {
-        name = "F-CK-1C_destr",
-        file = "f-ck-1c-oblomok",
-        fire = {0, 1}
-    }},
+    -- shape_table_data = {{
+    --     file = "f-ck-1c", -- 3D 模型檔名（需放在 Shapes 資料夾）
+    --     username = "F-CK-1C",
+    --     index = WSTYPE_PLACEHOLDER,
+    --     life = 20, -- 機體生命值（耐久/HP，整數，數值越高越難被摧毀）
+    --     vis = 3, -- 可見性等級（LOD/視覺等級，整數）
+    --     desrt = 'Fighter-2-crush'; -- Name of destroyed object file name Alphajet-destr. This is a placeholder.
+    --     fire = {300, 2}, -- 火焰效果設定：{持續時間秒, 強度}（秒, unitless）
+    --     classname = "lLandPlane",
+    --     positioning = "BYNORMAL"
+    -- }, 
+    -- -- {
+    -- --     name = "F-CK-1C_destr",
+    -- --     file = "f-ck-1c-oblomok",
+    -- --     fire = {0, 1}
+    -- -- }
+    -- },
 
     -- 國家
     Countries = {
@@ -133,7 +135,7 @@ local F_CK_1C = {
         [1] = {
             ejection_seat_name = "pilot_generic_seat",
             pilot_name = "pilot_generic",
-            drop_canopy_name = "f-ck-1c_canopy",
+            drop_canopy_name = "F-CK-1C_canopy",
             canopy_pos = {0, 0, 0},
             pos = {3.2, 0.27, 0}, -- 駕駛座在機體座標的 (x, y, z)，單位：公尺 (m)
             g_suit = 1.02 -- G-suit 補償係數（unitless，通常 1.0 = 無補償）
@@ -316,8 +318,8 @@ local F_CK_1C = {
     }),
 
     DamageParts = {
-        [1] = "f-ck-1c_oblomok_wing_R",
-        [2] = "f-ck-1c_oblomok_wing_L"
+        [1] = "F-CK-1C_oblomok_wing_R",
+        [2] = "F-CK-1C_oblomok_wing_L"
     },
 
     -- ===================== 飛行模型 (SFM_Data) - 簡化版 =====================
